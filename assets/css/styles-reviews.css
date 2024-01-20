@@ -1,0 +1,115 @@
+
+.section-review-main {
+	display: grid;
+	place-items: center;
+	height: 75vh;
+        background-color:#ffffff;
+}
+.section-review-header{
+    position: relative;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: 900;
+    padding-bottom: 25px;
+    color: #7b32a8;
+}
+.section-review-header:after{
+    content: '';
+    height: 3px;
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 100px);
+    background: #7b32a8;
+}
+.section-review-header span {
+	display: block;
+	font-size: 15px;
+	font-weight: 300;
+}
+.testimonials{
+    max-width: 800px;
+    padding: 0 15px 50px;
+    margin: 0 auto 80px auto;
+}
+.single-review-item{
+    background: #ffffff;
+    color: #111;
+    padding: 15px;
+    margin: 50px 15px;
+}
+.review-profile{
+    margin-bottom: 30px;
+    text-align: center;    
+}
+.profile-img-area {
+	margin: 0 15px 15px 15px;
+}
+.profile-img-area img {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	border: 7px solid blueviolet;
+}
+.review-content{
+    font-size: 18px;
+}
+.review-head{
+    text-align: center;
+}
+
+.review-content p {
+	text-align: center;
+        
+        
+}
+.review-content p span {
+	font-size: 40px;
+	margin-right: 20px;
+        color: blueviolet;
+}
+
+.room_type {
+	font-family: 'Berkshire Swash', cursive;
+        font-size: 30px;
+}
+
+
+.stars {
+    display: inline-block;
+    font-size: 30px;
+    color: #ebc634;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Empty star outline */
+  .stars::before {
+    content: "★★★★★";
+   
+  }
+
+  /* Filled stars */
+  .stars[data-rating="1"]::before { content: "★☆☆☆☆"; }
+  .stars[data-rating="2"]::before { content: "★★☆☆☆"; }
+  .stars[data-rating="3"]::before { content: "★★★☆☆"; }
+  .stars[data-rating="4"]::before { content: "★★★★☆"; }
+  .stars[data-rating="5"]::before { content: "★★★★★"; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

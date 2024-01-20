@@ -1,0 +1,29 @@
+
+
+.floating-button {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  background-color: black;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.floating-button span {
+  display: inline-block;
+  margin-top: 14px;
+}
+
+.floating-button:hover {
+  background-color: #d834eb;
+  transform: scale(1.1);
+}
+
+
