@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 17, 2023 at 08:22 PM
+-- Generation Time: Jan 31, 2024 at 08:54 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -76,6 +76,17 @@ CREATE TABLE `review` (
   `Review` varchar(512) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `review`
+--
+
+INSERT INTO `review` (`Review_Id`, `Room_Name`, `Rating`, `Review`) VALUES
+(3, 'Junior Suite', 4, 'This is one of the best room available in this Hotel.'),
+(4, 'Dark Moon', 5, 'great!!!!. hope to come again...'),
+(5, 'Heaven Family', 2, 'not satisfied....given facilities are not worthy.'),
+(6, 'Heaven Family', 3, 'Not that bad. but the facilities are not that much considerable'),
+(7, 'Kingsburry', 5, 'Great.i love this room. it is better if there were refrigerator...');
+
 -- --------------------------------------------------------
 
 --
@@ -125,7 +136,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`User_Id`, `Username`, `Password`, `Role`) VALUES
 (14, 'hotelstaff', '$2y$10$tNM/xaZTUnaILo90AxH6lOX539awxUF3AKhSzOoZpod7ICVMwA5f.', 'Hotel Staff'),
 (15, 'guest', '$2y$10$10MwN/XfJP2CXaBgqH.MhuRpq8fseAbGuR3p70yUW2FKQH/Twqdx2', 'Guest'),
-(16, 'admin', '$2y$10$YhH6eaiVhcfGTJ.v1xI72eHEF5kbkwF2DD5Pg/gXct/plBK0fMFm.', 'Admin');
+(16, 'admin', '$2y$10$YhH6eaiVhcfGTJ.v1xI72eHEF5kbkwF2DD5Pg/gXct/plBK0fMFm.', 'Admin'),
+(23, 'hunterkiller', '$2y$10$Mg.tuUtwlF0SGzPkcWlzfeL9I7VUixQAxHterdKQb6IPfICc/sI9e', 'Guest');
 
 -- --------------------------------------------------------
 
@@ -141,6 +153,13 @@ CREATE TABLE `user_details` (
   `Email` varchar(64) NOT NULL,
   `Tel` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user_details`
+--
+
+INSERT INTO `user_details` (`User_Details_Id`, `User_Id`, `Fname`, `Lname`, `Email`, `Tel`) VALUES
+(11, 23, 'dinidu', 'madushan', 'dinidu@gmail.com', 705361547);
 
 --
 -- Indexes for dumped tables
@@ -206,7 +225,7 @@ ALTER TABLE `reservation`
 -- AUTO_INCREMENT for table `review`
 --
 ALTER TABLE `review`
-  MODIFY `Review_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Review_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `room`
@@ -218,13 +237,13 @@ ALTER TABLE `room`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `User_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `User_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `user_details`
 --
 ALTER TABLE `user_details`
-  MODIFY `User_Details_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `User_Details_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
